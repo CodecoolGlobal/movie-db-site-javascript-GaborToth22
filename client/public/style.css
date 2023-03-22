@@ -20,6 +20,7 @@ textarea{resize: none;}
 [readonly]{pointer-events: none; opacity: .4;}
 
 h1 {
+<<<<<<< Updated upstream
     font-family: 'Tahoma', sans-serif;
     text-align: center;
     text-decoration-line: underline;
@@ -183,6 +184,88 @@ body.dark-mode {
     width: 80%;
     height: 300px;
     text-align: center;
+=======
+    
+    font-family: 'Tahoma', sans-serif;
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-color: #E2BA69;
+}
+
+
+body {
+    
+    font-family: 'Tahoma', sans-serif;
+    text-align: center;
+    color: #E2BA69;
+    
+}
+
+:root{
+    background-color: #e01742;
+    --bs-dark: #101930;
+  }
+  
+  .theme-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+  }
+  
+  .theme-container:hover {
+    opacity: 0.8;
+  }
+  
+  .shadow-dark {
+    background: linear-gradient(145deg, #07163b, #1d0c5c);
+    box-shadow: 17px 17px 23px #03011b91,
+      -17px -17px 23px #08032786, inset 5px 5px 4px #1d023b7e,
+      inset -5px -5px 4px #130749;
+  }
+  
+  .shadow-light {
+    box-shadow: 7px 7px 15px -10px #e0b04e, -4px -4px 13px #E2BA69,
+      inset 7px 7px 3px rgba(231, 191, 58, 0.315),
+      inset -11px -11px 3px rgba(211, 198, 14, 0.233)
+  }
+  
+  @keyframes change {
+    0% {
+      transform: scale(1);
+    }
+  
+    100% {
+      transform: scale(1.4);
+    }
+  }
+  
+  .change {
+    animation-name: change;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+  }
+
+  body.dark-mode {
+    color: #E2BA69;
+    text-shadow: 1px 1px #E2BA69;
+  }
+
+  #borders {
+    font-family: 'Tahoma', sans-serif;
+    font-size: medium;
+    background-image: url("aaa.jpg");
+    background-position: center;
+    width: 80%;
+    height: 300px;
+    text-align: center;
+>>>>>>> Stashed changes
     border: 4px solid;
     border-radius: 70px;
     border-color: #E2BA69;

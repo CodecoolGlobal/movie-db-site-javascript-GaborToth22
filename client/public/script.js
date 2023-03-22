@@ -62,7 +62,7 @@ const loadEvent = function() {
   }
   
   function setDark() {
-    root.style.setProperty("--bs-dark", "#101930");
+    root.style.setProperty("--bs-dark", "#212529");
     container.classList.remove("shadow-light");
     setTimeout(() => {
       container.classList.add("shadow-dark");

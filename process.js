@@ -3,24 +3,24 @@ import * as fs from 'node:fs';
 const movieDB = {
 	professionals: [],
 	movies: [],
-  genres: []
+  	genres: []
 }
 
 //write you code after this line
+let persons = [];
 try{
 	const data = fs.readFileSync("data.json", "utf8")
-		const mov = JSON.parse(data);
-		//console.log(mov)
-		findProfessionals(mov)
-		moviesToMovieDB(mov)
-		console.log(movieDB.movies)
+	const mov = JSON.parse(data);
+	findProfessionals(mov)
+	moviesToMovieDB(mov)
+	genresToMovieDB(mov)
+		console.log(movieDB.genres)
 	
 	}catch (err){
 		console.log(err)
 	}
 	
 function findProfessionals(mov){	
-let persons = [];
 let counter = 1;
 for(const movies of Object.values(mov)){
 	movies.forEach(element => {
@@ -112,6 +112,22 @@ function moviesToMovieDB(mov){
 			}
 		}
 		movieDB.movies.push(movies)
+	}
+}
+
+function genresToMovieDB(mov){
+	let genres = [];
+	let counter = 1;
+	for(const movie of mov.movies){
+		for(let genre of movie.genres){
+			let genreLower = genre.toLowerCase()
+			if(!genres.includes(genreLower)){
+				genres.push(genreLower);
+				movieDB.genres.push({id: counter,
+									name: genreLower})
+				counter++
+			}
+		}
 	}
 }
 	

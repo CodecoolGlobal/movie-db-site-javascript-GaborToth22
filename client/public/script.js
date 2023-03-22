@@ -62,7 +62,7 @@ const loadEvent = function() {
   }
   
   function setDark() {
-    root.style.setProperty("--bs-dark", "#212529");
+    root.style.setProperty("--bs-dark", "#101930");
     container.classList.remove("shadow-light");
     setTimeout(() => {
       container.classList.add("shadow-dark");
@@ -106,8 +106,10 @@ if(page === "movies" || page === ""){
       }
     }
     rootElement.insertAdjacentHTML("beforeend",
-     `<section id="borders">
+    `<section id="borders">
+    <br></br>
       <h1>${movie.title}</h1>
+    <br></br>
       <div class="detalis">
         <p><strong>Director:</strong> ${directorArr}</p>
         <p><strong>Writers:</strong> ${writerArr}</p>
@@ -117,7 +119,8 @@ if(page === "movies" || page === ""){
         <p><strong>Story:</strong> ${movie.storyline || movie.description}</p>
         <p><strong>Genres:</strong> ${movie.genres}</p>
       </div>
-      </section>`)
+      </section>
+      <br></br>`)
   })
 }else if(page === "actors"){
   for(let actor of data.professionals){
@@ -129,7 +132,7 @@ if(page === "movies" || page === ""){
           movieActorArr.push(movie.title)
         }
       }
-      rootElement.insertAdjacentHTML("beforeend", `<section id="borders"><h2>${actor.name}</h2><h4>${movieActorArr}<h4></section>`)
+      rootElement.insertAdjacentHTML("beforeend", `<section id="borders"><br></br><h1>${actor.name}</h1><br></br><h4>${movieActorArr}<h4></section><br></br>`)
     }
   }
 }else if(page === "directors"){
@@ -142,7 +145,7 @@ if(page === "movies" || page === ""){
           movieDirectorArr.push(movie.title)
         }
       }
-      rootElement.insertAdjacentHTML("beforeend", `<section id="borders"><h2>${director.name}</h2><h4>${movieDirectorArr}<h4></section>`)
+      rootElement.insertAdjacentHTML("beforeend", `<section id="borders"><br></br><h1>${director.name}</h1><br></br><h4>${movieDirectorArr}<h4></section><br></br>`)
     }
   }
 }else if(page === "writers"){
@@ -155,12 +158,12 @@ if(page === "movies" || page === ""){
           movieWriterArr.push(movie.title)
         }
       }
-      rootElement.insertAdjacentHTML("beforeend", `<section id="borders"><h2>${writer.name}</h2><h4>${movieWriterArr}<h4></section>`)
+      rootElement.insertAdjacentHTML("beforeend", `<section id="borders"><br></br><h1>${writer.name}</h1><br></br><h4>${movieWriterArr}<h4></section><br></br>`)
     }
   }
 }else if(page === "genres"){
   for(let genre of data.genres){
-    rootElement.insertAdjacentHTML("beforeend", `<div id="genres"><h1>${genre.name.toUpperCase()}</h1></div>`);
+    rootElement.insertAdjacentHTML("beforeend", `<div id="genres"><h1>${genre.name.toUpperCase()}</h1></div><br></br>`);
     let moviesArr = [];
     for(let movie of data.movies){
       if(movie.genres.includes(genre.name)){
@@ -195,7 +198,9 @@ if(page === "movies" || page === ""){
     }
     rootElement.insertAdjacentHTML("beforeend",
      `<section id="borders">
-      <h3>${movie.title}</h3>
+     <br></br>
+      <h1>${movie.title}</h1>
+      <br></br>
       <div class="detalis">
         <p><strong>Director:</strong> ${directorArr}</p>
         <p><strong>Writers:</strong> ${writerArr}</p>
@@ -205,7 +210,8 @@ if(page === "movies" || page === ""){
         <p><strong>Story:</strong> ${movie.storyline || movie.description}</p>
         <p><strong>Genres:</strong> ${movie.genres}</p>
       </div>
-      </section>`)
+      </section>
+      <br></br>`)
       }
     }
   }

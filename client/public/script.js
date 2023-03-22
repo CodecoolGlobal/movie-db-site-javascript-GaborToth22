@@ -4,6 +4,74 @@ const loadEvent = function() {
 
   const page = window.location.pathname.substring(1);
   // Write your JavaScript code after this line
+
+  //dark and light mode
+  document.body.style="background-color: var(--bs-dark);transition: 0.5s;"
+  const sun = "https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg";
+  const moon = "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg"
+  
+  let theme = "default";
+  const root = document.querySelector(":root");
+  const container = document.getElementsByClassName("theme-container")[0];
+  const themeIcon = document.getElementById("theme-icon");
+  
+  setDefault();
+  
+  container.addEventListener("click", setTheme);
+  
+  function setDefault() {
+    root.style.setProperty(
+      "--bs-dark",
+      "linear-gradient(318.32deg, #c3d1e4 0%, #dde7f3 55%, #d4e0ed 100%)"
+    );
+    container.classList.remove("shadow-dark");
+    container.classList.add("shadow-light");
+    themeIcon.src = sun;
+  }
+  
+  function setTheme() {
+    switch (theme) {
+      case "default":
+        setDark();
+        theme = "dark";
+        break;
+      case "dark":
+        setLight();
+        theme = "light";
+        break;
+      case "light":
+        setDark();
+        theme = "dark";
+        break;
+    }
+  }
+  
+  function setLight() {
+    root.style.setProperty(
+      "--bs-dark",
+      "linear-gradient(318.32deg, #c3d1e4 0%, #dde7f3 55%, #d4e0ed 100%)"
+    );
+    container.classList.remove("shadow-dark");
+    setTimeout(() => {
+      container.classList.add("shadow-light");
+      themeIcon.classList.remove("change");
+    }, 300);
+    themeIcon.classList.add("change");
+    themeIcon.src = sun;
+    document.body.classList.remove("dark-mode");
+  }
+  
+  function setDark() {
+    root.style.setProperty("--bs-dark", "#212529");
+    container.classList.remove("shadow-light");
+    setTimeout(() => {
+      container.classList.add("shadow-dark");
+      themeIcon.classList.remove("change");
+    }, 300);
+    themeIcon.classList.add("change");
+    themeIcon.src = moon;
+    document.body.classList.add("dark-mode");
+  }
   
   console.log("data: ", data);
   console.log("page: ", page);
@@ -38,7 +106,7 @@ if(page === "movies" || page === ""){
       }
     }
     rootElement.insertAdjacentHTML("beforeend",
-     `<section>
+     `<section id="borders">
       <h1>${movie.title}</h1>
       <div class="detalis">
         <p><strong>Director:</strong> ${directorArr}</p>
@@ -61,7 +129,7 @@ if(page === "movies" || page === ""){
           movieActorArr.push(movie.title)
         }
       }
-      rootElement.insertAdjacentHTML("beforeend", `<section><h2>${actor.name}</h2><h4>${movieActorArr}<h4></section>`)
+      rootElement.insertAdjacentHTML("beforeend", `<section id="borders"><h2>${actor.name}</h2><h4>${movieActorArr}<h4></section>`)
     }
   }
 }else if(page === "directors"){
@@ -74,7 +142,7 @@ if(page === "movies" || page === ""){
           movieDirectorArr.push(movie.title)
         }
       }
-      rootElement.insertAdjacentHTML("beforeend", `<section><h2>${director.name}</h2><h4>${movieDirectorArr}<h4></section>`)
+      rootElement.insertAdjacentHTML("beforeend", `<section id="borders"><h2>${director.name}</h2><h4>${movieDirectorArr}<h4></section>`)
     }
   }
 }else if(page === "writers"){
@@ -87,7 +155,7 @@ if(page === "movies" || page === ""){
           movieWriterArr.push(movie.title)
         }
       }
-      rootElement.insertAdjacentHTML("beforeend", `<section><h2>${writer.name}</h2><h4>${movieWriterArr}<h4></section>`)
+      rootElement.insertAdjacentHTML("beforeend", `<section id="borders"><h2>${writer.name}</h2><h4>${movieWriterArr}<h4></section>`)
     }
   }
 }else if(page === "genres"){
@@ -126,7 +194,7 @@ if(page === "movies" || page === ""){
       }
     }
     rootElement.insertAdjacentHTML("beforeend",
-     `<section>
+     `<section id="borders">
       <h3>${movie.title}</h3>
       <div class="detalis">
         <p><strong>Director:</strong> ${directorArr}</p>

@@ -130,8 +130,6 @@ function genresToMovieDB(mov){
 		}
 	}
 }
-	
-
 
 
 //write your code brefore this line

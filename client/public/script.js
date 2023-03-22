@@ -5,6 +5,16 @@ const loadEvent = function() {
   const page = window.location.pathname.substring(1);
   // Write your JavaScript code after this line
 
+  const toTop = document.querySelector(".to-top");
+
+  window.addEventListener("scroll", () => {
+   if(window.pageYOffset > 100){
+     toTop.classList.add("active");
+   }else{
+     toTop.classList.remove("active");
+   }
+   });
+
   //dark and light mode
   document.body.style="background-color: var(--bs-dark);transition: 0.5s;"
   const sun = "https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg";

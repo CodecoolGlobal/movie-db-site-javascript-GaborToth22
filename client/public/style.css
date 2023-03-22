@@ -39,7 +39,7 @@ body {
 
 .text-box {
   margin-left: -60vw;
- margin-top: 5vh;
+ margin-top: 0vh;
 }
 .text-box1 {
   margin-left: -35vw;
@@ -177,16 +177,18 @@ html {
 }
 
 .shadow-dark {
+      background:#e01742;
+      box-shadow: 7px 7px 15px -10px #e0b04e, -4px -4px 13px #E2BA69,
+      inset 7px 7px 3px rgba(231, 191, 58, 0.315),
+      inset -11px -11px 3px rgba(211, 198, 14, 0.233)
+  }
+  
+.shadow-light {
+
     background: linear-gradient(145deg, #07163b, #1d0c5c);
     box-shadow: 17px 17px 23px #03011b91,
       -17px -17px 23px #08032786, inset 5px 5px 4px #1d023b7e,
       inset -5px -5px 4px #130749;
-  }
-  
-.shadow-light {
-    box-shadow: 7px 7px 15px -10px #e0b04e, -4px -4px 13px #E2BA69,
-    inset 7px 7px 3px rgba(231, 191, 58, 0.315),
-    inset -11px -11px 3px rgba(211, 198, 14, 0.233)
   }
 
 @keyframes change {

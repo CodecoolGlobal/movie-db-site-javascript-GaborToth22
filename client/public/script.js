@@ -36,7 +36,7 @@ const loadEvent = function() {
     );
     container.classList.remove("shadow-dark");
     container.classList.add("shadow-light");
-    themeIcon.src = sun;
+    themeIcon.src = moon;
   }
   
   function setTheme() {
@@ -67,7 +67,7 @@ const loadEvent = function() {
       themeIcon.classList.remove("change");
     }, 300);
     themeIcon.classList.add("change");
-    themeIcon.src = sun;
+    themeIcon.src = moon;
     document.body.classList.remove("dark-mode");
   }
   
@@ -79,7 +79,7 @@ const loadEvent = function() {
       themeIcon.classList.remove("change");
     }, 300);
     themeIcon.classList.add("change");
-    themeIcon.src = moon;
+    themeIcon.src = sun;
     document.body.classList.add("dark-mode");
   }
   

@@ -241,4 +241,5 @@ section {
 
 section:hover {
   transform: scale(1.15);
+  background-color: #22254d;
 }

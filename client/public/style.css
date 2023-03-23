@@ -215,10 +215,22 @@ body.dark-mode {
     font-family: 'Tahoma', sans-serif;
     font-size: medium;
     width: 80%;
-    height: 300px;
+    height: 400px;
     text-align: center;
     border: 4px solid;
     border-radius: 70px;
     border-color: #E2BA69;
     margin: auto;
-  }
+}
+
+  #borders2 {
+    font-family: 'Tahoma', sans-serif;
+    font-size: medium;
+    width: 80%;
+    height: 200px;
+    text-align: center;
+    border: 4px solid;
+    border-radius: 70px;
+    border-color: #E2BA69;
+    margin: auto;
+}

@@ -142,7 +142,7 @@ if(page === "movies" || page === ""){
           movieActorArr.push(movie.title)
         }
       }
-      rootElement.insertAdjacentHTML("beforeend", `<section id="borders"><br></br><h1>${actor.name}</h1><br></br><h4>${movieActorArr}<h4></section><br></br>`)
+      rootElement.insertAdjacentHTML("beforeend", `<section id="borders2"><br></br><h1>${actor.name}</h1><br></br><h4>${movieActorArr}<h4></section><br></br>`)
     }
   }
 }else if(page === "directors"){
@@ -155,7 +155,7 @@ if(page === "movies" || page === ""){
           movieDirectorArr.push(movie.title)
         }
       }
-      rootElement.insertAdjacentHTML("beforeend", `<section id="borders"><br></br><h1>${director.name}</h1><br></br><h4>${movieDirectorArr}<h4></section><br></br>`)
+      rootElement.insertAdjacentHTML("beforeend", `<section id="borders2"><br></br><h1>${director.name}</h1><br></br><h4>${movieDirectorArr}<h4></section><br></br>`)
     }
   }
 }else if(page === "writers"){
@@ -168,7 +168,7 @@ if(page === "movies" || page === ""){
           movieWriterArr.push(movie.title)
         }
       }
-      rootElement.insertAdjacentHTML("beforeend", `<section id="borders"><br></br><h1>${writer.name}</h1><br></br><h4>${movieWriterArr}<h4></section><br></br>`)
+      rootElement.insertAdjacentHTML("beforeend", `<section id="borders2"><br></br><h1>${writer.name}</h1><br></br><h4>${movieWriterArr}<h4></section><br></br>`)
     }
   }
 }else if(page === "genres"){

@@ -234,3 +234,11 @@ body.dark-mode {
     border-color: #E2BA69;
     margin: auto;
 }
+
+section {
+  transition: transform 0.2s ease-in-out;
+}
+
+section:hover {
+  transform: scale(1.15);
+}

@@ -116,7 +116,7 @@ if(page === "movies" || page === ""){
       }
     }
     rootElement.insertAdjacentHTML("beforeend",
-    `<section id="borders">
+    `<section id="borders" style="transition: transform 0.1 ease-in-out;">
     <br></br>
       <h1>${movie.title}</h1>
     <br></br>

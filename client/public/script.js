@@ -5,6 +5,18 @@ const loadEvent = function() {
   const page = window.location.pathname.substring(1);
   // Write your JavaScript code after this line
 
+//Home button
+const home = document.querySelector(".home-box");
+
+window.addEventListener("scroll", () => {
+ if(window.pageYOffset < 100){
+   home.classList.remove("active");
+ }else{
+   home.classList.add("active");
+ }
+ });
+
+
   const toTop = document.querySelector(".to-top");
 
   window.addEventListener("scroll", () => {
@@ -88,7 +100,7 @@ const loadEvent = function() {
   
   const rootElement = document.getElementById("root");
  
-if(page === "movies" || page === ""){
+if(page === "movies"){
   data.movies.forEach(movie=>{
     let writerArr = [];
     let actorArr = [];
